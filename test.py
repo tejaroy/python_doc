@@ -86,3 +86,4 @@ for i in sorted(a):
 print("asc:", c)
 print('desc:', c[::-1])
 
+
