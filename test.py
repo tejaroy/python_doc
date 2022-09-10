@@ -87,3 +87,4 @@ print("asc:", c)
 print('desc:', c[::-1])
 
 
+
