@@ -132,6 +132,7 @@ def send_mail_reports(attachments=[], recipients=['Deepak.Singhal@Dvara.com'], t
     return 'Mail sent Successfully'
 
 
+
 def create_range(start_col='B', no_of_cols=2, start_row=2, end_row=2):
     if no_of_cols > 25:
         r = no_of_cols // 26
