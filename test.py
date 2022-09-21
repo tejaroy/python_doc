@@ -119,6 +119,7 @@
 # # Driver code
 # print(calculateAge(date(2000, 1, 29)), "years")
 import datetime
+
 # from datetime import date
 #
 #
@@ -186,43 +187,56 @@ import datetime
 #
 # calculate_age_old(date(2000, 1, 29))
 
-import datetime
-from datetime import date
+# import datetime
+# from datetime import date
+#
+#
+# def ageCalculator(year, month, dat):
+#     today = date.today()
+#     dob = datetime.date(year, month, dat)
+#     # calculate year
+#     years = ((today - dob).total_seconds() / (365.242 * 24 * 3600))
+#     yearsInt = int(years)
+#
+#     # calculate month
+#     months = (years - yearsInt) * 12
+#     monthsInt = int(months)
+#
+#     # calculate day
+#     days = (months - monthsInt) * (365.242 / 12)
+#     daysInt = int(days)
+#     partner = input('enter your product:-')
+#     try:
+#         if partner == 'DCB':
+#             if monthsInt >= 6 and daysInt >= 1:
+#                 print(yearsInt + 1)
+#                 monthsInt, daysInt = 0, 0
+#                 print('You are {0} years, {1} months, {2} days old.'.format(yearsInt+1, monthsInt, daysInt))
+#
+#             else:
+#                 print('You are {0} years, {1} months, {2} days old.'.format(yearsInt, monthsInt, daysInt))
+#         else:
+#             if partner == 'Samunathi' or 'Agriwise' or 'DER':
+#                 if monthsInt >= 12 and daysInt >= 1:
+#                     monthsInt, daysInt = 0, 0
+#                     print('You are {0} years, {1} months, {2} days old.'.format(yearsInt+1, monthsInt, daysInt))
+#                 else:
+#                     print('You are {0} years, {1} months, {2} days old.'.format(yearsInt, monthsInt, daysInt))
+#     except Exception as e:
+#         print(e)
+#
+#
+# ageCalculator(2000, 1, 29)
 
 
-def ageCalculator(year, month, dat):
-    today = date.today()
-    dob = datetime.date(year, month, dat)
-    # calculate year
-    years = ((today - dob).total_seconds() / (365.242 * 24 * 3600))
-    yearsInt = int(years)
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
 
-    # calculate month
-    months = (years - yearsInt) * 12
-    monthsInt = int(months)
+print("\n\nRecursion Example Results")
+tri_recursion(6)
 
-    # calculate day
-    days = (months - monthsInt) * (365.242 / 12)
-    daysInt = int(days)
-    partner = input('enter your product:-')
-    try:
-        if partner == 'DCB':
-            if monthsInt >= 6 and daysInt >= 1:
-                print(yearsInt + 1)
-                monthsInt, daysInt = 0, 0
-                print('You are {0} years, {1} months, {2} days old.'.format(yearsInt+1, monthsInt, daysInt))
-
-            else:
-                print('You are {0} years, {1} months, {2} days old.'.format(yearsInt, monthsInt, daysInt))
-        else:
-            if partner == 'Samunathi' or 'Agriwise' or 'DER':
-                if monthsInt >= 12 and daysInt >= 1:
-                    monthsInt, daysInt = 0, 0
-                    print('You are {0} years, {1} months, {2} days old.'.format(yearsInt+1, monthsInt, daysInt))
-                else:
-                    print('You are {0} years, {1} months, {2} days old.'.format(yearsInt, monthsInt, daysInt))
-    except Exception as e:
-        print(e)
-
-
-ageCalculator(2000, 1, 29)
