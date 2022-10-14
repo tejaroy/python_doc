@@ -37,6 +37,7 @@ def send_mail_reports(attachments=[], recipients=[], tabular_table=None, tabular
 
     # attachments = [att]
 
+
     # Add the attachments to the message
     for file in attachments:
         try:
